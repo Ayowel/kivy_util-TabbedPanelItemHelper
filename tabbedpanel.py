@@ -42,3 +42,21 @@ class TabbedPanelItemHelper(TabbedPanelItem):
 
         super(TabbedPanelItemHelper, self).remove_widget(widget)
 
+if __name__ == '__main__':
+
+    from kivy.base import runTouchApp
+    from kivy.lang.builder import Builder
+
+    app = Builder.load_string('''
+TabbedPanel:
+    TabbedPanelItemHelper:
+
+        info: "I'm a good guy"
+
+        Label:
+            vparent:
+            text: self.vparent.info
+    ''')
+
+    runTouchApp(app)
+
