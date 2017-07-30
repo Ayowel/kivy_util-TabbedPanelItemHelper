@@ -51,10 +51,9 @@ if __name__ == '__main__':
 TabbedPanel:
     TabbedPanelItemHelper:
 
-        info: "I'm a good guy"
+        info: "I'm good"
 
         Label:
-            vparent:
             text: self.vparent.info
     ''')
 
